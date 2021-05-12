@@ -1,0 +1,52 @@
+* {
+    font-family: sans-serif;
+}
+
+.search-bar {
+    background-color: orange;
+    padding: 10px;
+    display: flex;
+}
+
+.card-task {
+    width: 253px;
+}
+
+.task-img img {
+    width: 218px ;
+}
+
+.extra-content {
+    display: flex;
+}
+
+.deadline p {
+    font-size: large;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons-task {
+    display: none;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.about {
+    display: flex;
+}
+
+.about .brand {
+    background-color: gray;
+    width: 300px;
+    text-align: center;
+}
+
+footer {
+    background-color: #422755 ;
+}
