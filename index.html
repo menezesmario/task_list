@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -12,9 +12,25 @@
 </head>
 <body>
     <header>
+        <div class="header-skew">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <polygon fill="white" points="0,100 0,0 100,100"/>
+            </svg> 
+           
+            <div class="header-content">
+                <h1><strong>Tarefas a fazer</strong></h1>
+                <p class="subtitle">Adicione e complete tarefas para organizar melhor a sua semana. :)</p>          
+ 
+            </div>                          
+        </div>           
+    </header>
+
+    <!-- <header>
+        <div class="container">
         <h1><strong>Tarefas as fazer</strong></h1>
-        <h2>Adicione e complete tarefas para organizar melhor a sua semana. :)</h2>
-        </header>
+        <p class="subtitle">Adicione e complete tarefas para organizar melhor a sua semana. :)</p>
+        </div>
+    </header> -->
     <main>
 
         <!-- BARRA DE BUSCA -->
@@ -38,8 +54,7 @@
         <!-- LISTA DE TAREFAS -->
 
         <section class="tasks-list">
-            <div class="card-task">
-                
+            <div class="card-task">                
                 <figure class="task-img">
                     <img src="./task-img.jpg" alt="">
                 </figure>
@@ -57,6 +72,81 @@
                     </div>
                 </div>         
             </div>
+            <div class="card-task">                
+                <figure class="task-img">
+                    <img src="./task-img.jpg" alt="">
+                </figure>
+               
+                <div class="task-info">
+                    <div class="task-title">Nome da tarefa</div>
+                    <div class="task-description">Descrição da tarefa, o que deve ser feito e muitas informações que explicam melhor do que se trata.</div>
+                    <div class="extra-content">
+                        <p>Prazo: <span class="deadline">00/00</span> </p>
+                        <small class="inclusion">Data de inclusão: há 2 semanas</small>
+                        <div class="buttons-task">
+                            <button class="done">Concluir</button>
+                            <button class="change-deadline"><i class="far fa-clock"></i> Alterar prazo</button>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+            <div class="card-task">                
+                <figure class="task-img">
+                    <img src="./task-img.jpg" alt="">
+                </figure>
+               
+                <div class="task-info">
+                    <div class="task-title">Nome da tarefa</div>
+                    <div class="task-description">Descrição da tarefa, o que deve ser feito e muitas informações que explicam melhor do que se trata.</div>
+                    <div class="extra-content">
+                        <p>Prazo: <span class="deadline">00/00</span> </p>
+                        <small class="inclusion">Data de inclusão: há 2 semanas</small>
+                        <div class="buttons-task">
+                            <button class="done">Concluir</button>
+                            <button class="change-deadline"><i class="far fa-clock"></i> Alterar prazo</button>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+            <div class="card-task">                
+                <figure class="task-img">
+                    <img src="./task-img.jpg" alt="">
+                </figure>
+               
+                <div class="task-info">
+                    <div class="task-title">Nome da tarefa</div>
+                    <div class="task-description">Descrição da tarefa, o que deve ser feito e muitas informações que explicam melhor do que se trata.</div>
+                    <div class="extra-content">
+                        <p>Prazo: <span class="deadline">00/00</span> </p>
+                        <small class="inclusion">Data de inclusão: há 2 semanas</small>
+                        <div class="buttons-task">
+                            <button class="done">Concluir</button>
+                            <button class="change-deadline"><i class="far fa-clock"></i> Alterar prazo</button>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+            <div class="card-task">                
+                <figure class="task-img">
+                    <img src="./task-img.jpg" alt="">
+                </figure>
+               
+                <div class="task-info">
+                    <div class="task-title">Nome da tarefa</div>
+                    <div class="task-description">Descrição da tarefa, o que deve ser feito e muitas informações que explicam melhor do que se trata.</div>
+                    <div class="extra-content">
+                        <p>Prazo: <span class="deadline">00/00</span> </p>
+                        <small class="inclusion">Data de inclusão: há 2 semanas</small>
+                        <div class="buttons-task">
+                            <button class="done">Concluir</button>
+                            <button class="change-deadline"><i class="far fa-clock"></i> Alterar prazo</button>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+         
+            
+           
            
             
         </section>
