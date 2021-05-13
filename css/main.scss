@@ -199,6 +199,28 @@ main {
     display: none;
 }
 
+// BUTTONS
+
+button {
+    height: 40px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.more-tasks {
+    background-color: $third-color ;
+    color: white;
+    width: 200px;
+    font-size: 16px;
+    font-family: $primary-font;
+    font-weight: bold;
+    margin-top: 50px;
+
+    
+}
+
+
+
 .newsletter {
     background-color: #E5E5E5;
 }
