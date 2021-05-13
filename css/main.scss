@@ -1,27 +1,38 @@
+// COLORS
+
 $primary-color: #422755;
 $second-color: #FEAF3D;
 $third-color: #6E4B87;
 $danger-color: #F04837;
+$white: #FFFFFF;
+$gray: #fafafa;
+$black: #000000;
 
+// FONT
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    outline: 0;
-}
+$primary-font: 'Open Sans', sans-serif;
+$light: 300;
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
 
 html,
 body {
     height: 100vh;
+    width: 100%;
     font-family: 'Open Sans', sans-serif;
     text-rendering: optimizeLegibility;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;     
 }
 
 header {
+    position: relative;
     display: flex;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 .header-skew {
@@ -29,8 +40,7 @@ header {
     width: 100vw;
     height: 400px;
     background: $primary-color; 
-    border: 0;   
-
+    border: 0;
 }
 
 header svg {
@@ -44,27 +54,11 @@ header svg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #FFF;    
+    color: #FFF;
+    text-align: center; 
+    position: inherit;  
 }
 
-
-// header {
-//     background-color: $primary-color;
-//     align-items: center;  
-
-
-// }
-
-// header .container {
-//     color: #FFFFFF;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;  
-//     width: 100%;
-//     max-width: 1080px;
-//     height: 380px;
-//     margin: auto;
-// }
 
 main {
     display: flex;
@@ -73,14 +67,56 @@ main {
     max-width: 1080px;
 }
 
+
+// BARRA DE BUSCA 
 .search-bar {
-    width: 1081px;
+    align-items: center;
+    width: 100%;
     height: 85px;
-    border-radius: 5px;
+    margin-top: 55px;
+    border-radius: 8px;
     background-color: $second-color;
-    padding: 10px;
     display: flex;
-    justify-content: space-around;    
+    color: white ;
+    font-weight: $regular;
+    justify-content: space-around;
+    
+    input {
+        height: 35px;
+        width: 275px;
+        border: 0;
+        border-radius: 8px 0px 0px 8px;
+        padding: 10px;
+        font-size: 12px;
+        font-weight: $regular;
+    }
+
+    button {
+        width: 70px;
+        height: 36px;
+        background-color: $third-color;
+        border: 0;
+        border-radius: 8px;
+        color: white;
+        font-family: $primary-font;
+        font-weight: bold;
+        font-size: 14px;
+        margin-left: -35px;
+        margin-top: 4px;
+    }
+
+    select {
+        height: 35px;
+        width: 195px;
+        border: 0;
+        border-radius: 8px;
+        padding: 0 20px;
+        font-family: $primary-font;
+        font-size: 14px;
+        font-weight: $regular;
+    }
+
+     
 }
 
 .tasks-list {
@@ -93,6 +129,10 @@ main {
     border: solid 1px;
     border-radius: 10px;
     padding: 20px;
+
+    figure .task-img {
+        width: 250px ;
+    }
 } 
 
 .short-deadline {
@@ -103,7 +143,8 @@ main {
 }
 
 .task-img img {
-    width: 250px ;
+    
+
 }
 
 .task-title {
