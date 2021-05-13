@@ -1,5 +1,12 @@
 * {
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #422755;
+    color: #FFFFFF;
 }
 
 .search-bar {
@@ -8,29 +15,78 @@
     display: flex;
 }
 
+.tasks-list {
+    display: flex;
+}
+
 .card-task {
-    width: 253px;
+    max-width: 253px;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 20px;
+} 
+
+.short-deadline {
+    background-color: #422755;
+    color:#FFFFFF;
+    margin-left: -30px;
+    margin-top: -80px;
+    width: 100px;
 }
 
 .task-img img {
-    width: 218px ;
+    width: 250px ;
 }
 
-.extra-content {
+.task-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 11px;
+}
+
+.task-description {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 5px;
     display: flex;
 }
 
-.deadline p {
-    font-size: large;
+.extra-content p {
+    font-family: 'Open Sans';
+    font-size: 12px;
+    font-weight:700;
+    margin-top: 8px;
 }
 
-.task-info {
+
+.deadline {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: red;
+}
+
+.inclusion {
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    font-weight:400;
+}
+
+
+/* .task-info {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .buttons-task {
     display: none;
+}
+
+.newsletter {
+    background-color: #E5E5E5;
 }
 
 .newsletter-form {
@@ -42,11 +98,11 @@
 }
 
 .about .brand {
-    background-color: gray;
     width: 300px;
     text-align: center;
 }
 
 footer {
-    background-color: #422755 ;
+    background-color: #422755;
+    color: #FFFFFF;
 }
