@@ -64,11 +64,13 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: ce;
     max-width: 1080px;
 }
 
 
 // BARRA DE BUSCA 
+
 .search-bar {
     align-items: center;
     width: 100%;
@@ -120,31 +122,39 @@ main {
 }
 
 .tasks-list {
+    margin-top: 70px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
 }
 
 .card-task {
-    max-width: 253px;
+    width: 250px;
     border: solid 1px;
     border-radius: 10px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
 
-    figure .task-img {
-        width: 250px ;
+    figure {
+        margin: 0;
+        width: 100% ;
+        height: 185px;
+        background-image: url("../img/card-bg.png");
+        overflow: hidden;     
     }
+    
 } 
+
+
 
 .short-deadline {
     background-color: #422755;
     color:#FFFFFF;
     margin-left: -30px;
     width: 100px;
-}
-
-.task-img img {
-    
-
 }
 
 .task-title {
