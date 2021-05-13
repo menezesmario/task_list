@@ -142,6 +142,7 @@ main {
 }
 
 .card-task {
+  background-color: white;
   width: 230px;
   border: solid 1px;
   border-radius: 10px;
@@ -162,6 +163,20 @@ main {
   height: 185px;
   background-image: url("../img/card-bg.png");
   overflow: hidden;
+}
+
+.card-task:hover {
+  -webkit-box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card-task:hover .buttons-task {
+  display: block;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .short-deadline {
@@ -210,6 +225,30 @@ main {
 } */
 .buttons-task {
   display: none;
+}
+
+.buttons-task button {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.buttons-task .done {
+  background-color: #422755;
+  width: 100%;
+  margin-top: 25px;
+  color: white;
+}
+
+.buttons-task .change-deadline {
+  background-color: #F04837;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.buttons-task i {
+  margin-right: 15px;
 }
 
 button {

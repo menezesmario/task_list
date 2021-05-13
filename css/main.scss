@@ -131,6 +131,7 @@ main {
 }
 
 .card-task {
+    background-color: white;
     width: 230px;
     border: solid 1px;
     border-radius: 10px;
@@ -138,7 +139,6 @@ main {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
-    
 
     figure {
         margin: 0;
@@ -149,6 +149,20 @@ main {
     }
     
 } 
+
+.card-task:hover {
+    box-shadow: 1px 5px 10px 0px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: 0.2s;
+
+    .buttons-task {
+        display: block;
+        transition: 1s;
+
+    }
+
+
+}
 
 
 
@@ -199,6 +213,32 @@ main {
 
 .buttons-task {
     display: none;
+    
+    button {
+        color: white;
+        font-family: $primary-font;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .done {
+        background-color: $primary-color;
+        width: 100%;
+        margin-top: 25px;
+        color: white;        
+    }
+
+    .change-deadline {
+        background-color: $danger-color;
+        margin-top: 10px;
+        width: 100%;
+
+    }
+
+    i {
+        margin-right: 15px;
+    }
+
 }
 
 button {
