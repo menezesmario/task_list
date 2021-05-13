@@ -6,7 +6,7 @@ $third-color: #6E4B87;
 $danger-color: #F04837;
 $white: #FFFFFF;
 $gray: #fafafa;
-$black: #000000;
+$black: #414141;
 
 // FONT
 
@@ -66,7 +66,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: ce;
-    max-width: 1080px;
+    max-width: 1200px;
 }
 
 
@@ -131,12 +131,13 @@ main {
 }
 
 .card-task {
-    width: 250px;
+    width: 230px;
     border: solid 1px;
     border-radius: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
     
 
     figure {
@@ -242,7 +243,7 @@ button {
     justify-content: space-between;
     margin-bottom: 30px;
     margin-left: 50px ;
-    
+
     label {
         font-size: 12px;
         color: #747474;
@@ -269,14 +270,34 @@ button {
 
 .about {
     display: flex;
-}
+    margin-top: 100px;
+    font-size: 14px;
+    color: black;
+    font-weight: $regular;
 
-.about .brand {
-    width: 300px;
-    text-align: center;
+    .about-text {
+        margin-left: 50px;
+    }
+
+    .brand {
+        width: 300px;
+        margin-top: 15px;
+    }
 }
 
 footer {
     background-color: #422755;
     color: #FFFFFF;
+    margin-top: 50px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    font-weight: $regular;
+    padding: 40px;
+
+    p {
+        margin: 0px;
+    }
 }
