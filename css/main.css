@@ -13,6 +13,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header {
@@ -212,6 +215,7 @@ button {
   height: 40px;
   border: 0;
   border-radius: 8px;
+  color: white;
 }
 
 .more-tasks {
@@ -226,12 +230,54 @@ button {
 
 .newsletter {
   background-color: #E5E5E5;
+  margin-top: 140px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.newsletter h2 {
+  font-size: 14px;
+  color: #422755;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 50px;
 }
 
 .newsletter-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+  margin-left: 50px;
+}
+
+.newsletter-form label {
+  font-size: 12px;
+  color: #747474;
+  font-weight: 400;
+}
+
+.newsletter-form input {
+  height: 40px;
+  width: 340px;
+  border: 0;
+  border-radius: 8px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.register-btn {
+  background-color: #6E4B87;
+  margin-right: 50px;
 }
 
 .about {
