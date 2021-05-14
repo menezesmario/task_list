@@ -1,3 +1,7 @@
+button {
+  cursor: pointer;
+}
+
 html,
 body {
   height: 100vh;
@@ -34,6 +38,13 @@ header {
   height: 400px;
   background: #422755;
   border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 50px;
 }
 
 header svg {
@@ -56,10 +67,11 @@ header svg {
           align-items: center;
   color: #FFF;
   text-align: center;
-  position: inherit;
+  padding-top: 50px;
 }
 
 main {
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,6 +89,11 @@ main {
 }
 
 .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -85,13 +102,12 @@ main {
   margin-top: 55px;
   border-radius: 8px;
   background-color: #FEAF3D;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   color: white;
   font-weight: 400;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+}
+
+.search-bar label {
+  margin-right: 20px;
 }
 
 .search-bar input {
@@ -115,12 +131,11 @@ main {
   font-weight: bold;
   font-size: 14px;
   margin-left: -35px;
-  margin-top: 4px;
 }
 
 .search-bar select {
   height: 35px;
-  width: 195px;
+  width: 175px;
   border: 0;
   border-radius: 8px;
   padding: 0 20px;
@@ -139,6 +154,12 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card-task {
@@ -154,7 +175,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 40px;
+  margin: 10px;
 }
 
 .card-task figure {
@@ -165,10 +186,33 @@ main {
   overflow: hidden;
 }
 
+.card-task .header-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-task .header-card i {
+  display: none;
+}
+
+.card-task .extra-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-task button .done-mobile {
+  display: none;
+}
+
 .card-task:hover {
   -webkit-box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -298,12 +342,14 @@ button {
           justify-content: space-between;
   margin-bottom: 30px;
   margin-left: 50px;
+  vertical-align: bottom;
 }
 
 .newsletter-form label {
   font-size: 12px;
   color: #747474;
   font-weight: 400;
+  margin: 10px;
 }
 
 .newsletter-form input {
@@ -312,7 +358,7 @@ button {
   border: 0;
   border-radius: 8px;
   margin-right: 10px;
-  padding: 5px;
+  padding-left: 20px;
 }
 
 .register-btn {
@@ -334,7 +380,7 @@ button {
   margin-left: 50px;
 }
 
-.about .brand {
+.about .brand-logo {
   width: 300px;
   margin-top: 15px;
 }
@@ -343,7 +389,7 @@ footer {
   background-color: #422755;
   color: #FFFFFF;
   margin-top: 50px;
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,4 +407,190 @@ footer {
 
 footer p {
   margin: 0px;
+}
+
+@media (max-width: 360px) {
+  html,
+  body {
+    width: 100%;
+    margin: 0px;
+  }
+  header {
+    width: 100%;
+  }
+  .header-skew {
+    top: 0;
+    width: 100%;
+    height: 160px;
+    background: #422755;
+    border: 0;
+  }
+  header svg {
+    position: absolute;
+    margin-top: 135px;
+    width: 100%;
+    height: 25px;
+  }
+  .header-content {
+    margin-top: -40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #FFF;
+  }
+  .header-content .subtitle {
+    display: none;
+  }
+  main {
+    width: 100%;
+  }
+  .search-bar {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px 0px;
+  }
+  .search-bar .search-field {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .search-bar .search-field input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .search-bar .search-field label {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .search-bar .search-field .filter-menu {
+    margin: 20px;
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .search-bar .search-field button {
+    margin-left: -60px;
+  }
+  .tasks-list {
+    width: 100%;
+  }
+  .card-task {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .card-task .task-title {
+    margin-top: 0px;
+  }
+  .card-task figure {
+    width: 145px;
+    height: 180px;
+  }
+  .card-task .task-info {
+    width: 150px;
+    margin-left: 10px;
+  }
+  .card-task .task-info .task-description {
+    font-size: 11px;
+  }
+  .card-task .task-info .header-card {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .card-task .task-info .header-card button {
+    height: 20px;
+    padding: 0px;
+  }
+  .card-task .task-info .header-card button i {
+    display: block;
+    color: #F04837;
+    font-size: 20px;
+  }
+  .card-task .task-info .footer-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .card-task .task-info .footer-card .change-deadline {
+    display: none;
+  }
+  .card-task .task-info .footer-card .inclusion {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  .card-task .buttons-task {
+    display: block;
+  }
+  .card-task .buttons-task .done {
+    margin-top: 0px;
+    width: 150px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #422755;
+    color: #422755;
+  }
+  .newsletter {
+    display: none;
+  }
+  .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90%;
+  }
+  .about .brand-logo {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 160px;
+  }
+  .about .about-text {
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 0px;
+    font-size: 12px;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }

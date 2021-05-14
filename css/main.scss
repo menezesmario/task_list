@@ -17,6 +17,12 @@ $semi-bold: 600;
 $bold: 700;
 $extra-bold: 800;
 
+// BUTTONS
+
+button {
+    cursor: pointer;
+}
+
 html,
 body {
     height: 100vh;
@@ -42,6 +48,9 @@ header {
     height: 400px;
     background: $primary-color; 
     border: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
 }
 
 header svg {
@@ -53,15 +62,16 @@ header svg {
 
 .header-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;   
     align-items: center;
     color: #FFF;
     text-align: center; 
-    position: inherit;  
+    padding-top: 50px ;
 }
 
 
 main {
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,16 +83,20 @@ main {
 // BARRA DE BUSCA 
 
 .search-bar {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 85px;
     margin-top: 55px;
     border-radius: 8px;
     background-color: $second-color;
-    display: flex;
     color: white ;
     font-weight: $regular;
-    justify-content: space-around;
+
+    label {
+        margin-right: 20px;
+    }
     
     input {
         height: 35px;
@@ -105,12 +119,11 @@ main {
         font-weight: bold;
         font-size: 14px;
         margin-left: -35px;
-        margin-top: 4px;
     }
 
     select {
         height: 35px;
-        width: 195px;
+        width: 175px;
         border: 0;
         border-radius: 8px;
         padding: 0 20px;
@@ -127,6 +140,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: top;
+    justify-content: center;
    
 }
 
@@ -138,7 +153,7 @@ main {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin: 10px;
 
     figure {
         margin: 0;
@@ -147,21 +162,35 @@ main {
         background-image: url("../img/card-bg.png");
         overflow: hidden;     
     }
+
+    .header-card {
+        display: flex;
+
+        i {
+            display: none;
+        }       
+    }
+
+    .extra-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button .done-mobile {
+        display: none;
+
+    }
     
 } 
 
 .card-task:hover {
     box-shadow: 1px 5px 10px 0px rgba(0,0,0,0.25);
-    cursor: pointer;
     transition: 0.2s;
 
     .buttons-task {
         display: block;
         transition: 1s;
-
     }
-
-
 }
 
 
@@ -218,7 +247,7 @@ main {
         color: white;
         font-family: $primary-font;
         font-size: 16px;
-        font-weight: bold;
+        font-weight: bold;        
     }
 
     .done {
@@ -283,11 +312,13 @@ button {
     justify-content: space-between;
     margin-bottom: 30px;
     margin-left: 50px ;
-
+    vertical-align: bottom;
+    
     label {
         font-size: 12px;
         color: #747474;
         font-weight: $regular;
+        margin: 10px;
     }
 
     input {
@@ -296,11 +327,11 @@ button {
         border: 0;
         border-radius: 8px;
         margin-right: 10px;
-        padding: 5px;
+        padding-left: 20px;
 
     }
 
-
+  
 }
 
 .register-btn {
@@ -319,7 +350,7 @@ button {
         margin-left: 50px;
     }
 
-    .brand {
+    .brand-logo {
         width: 300px;
         margin-top: 15px;
     }
@@ -329,7 +360,7 @@ footer {
     background-color: #422755;
     color: #FFFFFF;
     margin-top: 50px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -340,4 +371,200 @@ footer {
     p {
         margin: 0px;
     }
+}
+
+
+// MEDIA QUERIES
+
+
+@media (max-width: 360px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0px;
+    }
+
+    header {
+        width: 100%; 
+    }
+
+    .header-skew {
+        top: 0;
+        width: 100%;
+        height: 160px;
+        background: $primary-color; 
+        border: 0;
+    }
+    
+    header svg {
+        position: absolute;
+        margin-top: 135px;
+        width: 100%;
+        height: 25px;
+      }
+    
+    .header-content {
+        margin-top: -40px;
+        display: flex;
+        flex-direction: column;   
+        color: #FFF;
+        
+        .subtitle {
+            display: none;
+        }
+    }
+
+
+    main {
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0px;
+
+
+        .search-field {            
+            width: 90%;
+            display: flex;
+
+            input {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            label {
+                font-size: 12px;
+                font-weight: $semi-bold;
+            }
+
+            .filter-menu {
+                margin: 20px;
+                width: 90% ;
+                align-items: center;
+                justify-content: center;
+            }
+
+            button {
+                margin-left: -60px;
+            }
+        }
+    }
+
+    .tasks-list {
+        width: 100%;
+    }
+
+    .card-task {
+        width: 100% ;
+        display: flex;
+        flex-direction: row;
+
+        .task-title {
+            margin-top: 0px;
+        }
+
+        figure {
+            width: 145px;
+            height: 180px;
+        }
+
+        .task-info {
+            width: 150px;
+            margin-left: 10px;
+
+            .task-description {
+                font-size: 11px;
+            }
+
+            .header-card {
+                
+                justify-content: space-between;
+
+                button {
+                    height: 20px;
+                    padding: 0px;
+                    i {
+                        display: block;
+                        color: $danger-color;
+                        font-size: 20px;
+                    }
+                }
+                               
+            }
+
+            .footer-card {
+                display: flex;
+                flex-direction: column-reverse;
+
+                .change-deadline {
+                    display: none;
+                }
+
+                .inclusion {
+                    font-size: 10px;
+                    margin-top: 10px;
+                }
+
+            }
+        }
+
+        .buttons-task {
+
+            display: block;
+            
+            
+
+            .done {
+                margin-top: 0px;
+                width: 150px;
+                height: 30px;
+                background-color: white;
+                border: 1px solid $primary-color;
+                color: $primary-color;
+            }
+
+            
+        }
+
+        
+    }
+
+
+
+    .newsletter {
+        display: none;        
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+
+        .brand-logo {
+            align-items: center;
+            width: 160px;
+            
+        }
+
+        .about-text {
+            text-align: center;
+            margin-top: 40px;
+            margin-left: 0px;
+            font-size: 12px;
+        }
+
+    }
+
+    footer {
+        display: flex;
+    }
+
+
 }
