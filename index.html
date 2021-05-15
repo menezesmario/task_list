@@ -48,15 +48,16 @@
         <!-- LISTA DE TAREFAS -->
 
         <section class="tasks-list">
-            <div class="card-task">                
+            <div class="card-task">
+                <div class="status-tag short-deadline">
+                    <p>Prazo curto!</p> 
+                </div>                
                 <figure>
-                </figure>
-               
+                </figure>               
                 <div class="task-info">
                     <div class="header-card">
                         <div class="task-title">Nome da tarefa</div><button alt="Alterar prazo"><i class="far fa-clock"></i></button>
-                    </div>
-                    
+                    </div>                    
                     <div class="task-description">Descrição da tarefa, o que deve ser feito e muitas informações que explicam melhor do que se trata.</div>
                     <div class="extra-content">
                         <p>Prazo: <span class="deadline">00/00</span> </p>
@@ -181,10 +182,12 @@
                     </div>
                 </div>         
             </div>
-            <div class="card-task">                
+            <div class="card-task"> 
+                <div class="status-tag late-task">
+                    Atrasado  :(
+                </div>                
                 <figure>
-                </figure>
-               
+                </figure>               
                 <div class="task-info">
                     <div class="header-card">
                         <div class="task-title">Nome da tarefa</div><button alt="Alterar prazo"><i class="far fa-clock"></i></button>
@@ -240,20 +243,21 @@
 
         <section class="newsletter">
             <h2 class="newsletter-title">Quer receber dicas para organizar melhor a sua rotina? Cadastre-se!</h2>
-            <div>
-                <form action="#" class="newsletter-form">
-                    <div class="form-name">
-                        <label>nome</label><br>
-                        <input type="text" id="user-name" name="user-name" placeholder="Digite seu nome">
-                    </div>
-                    <div class="form-email">
-                        <label>e-mail</label><br>
-                        <input type="e-mail" id="user-email" name="user-email" placeholder="Digite seu e-mail">
-                    </div>
+            <form action="#" class="newsletter-form">
+                <div class="form-name">
+                    <label>nome</label><br>
+                    <input type="text" id="user-name" name="user-name" placeholder="Digite seu nome">
+                </div>
+                <div class="form-email">
+                    <label>e-mail</label><br>
+                    <input type="e-mail" id="user-email" name="user-email" placeholder="Digite seu e-mail">
+                </div>
+                <div class="form-btn">
+                    <div class="btn-top"></div>
                     <button class="register-btn">Cadastrar</button>
-                </form>
+                </div>
+            </form>
 
-            </div>
         </section>
 
         <section class="about">

@@ -1,7 +1,3 @@
-button {
-  cursor: pointer;
-}
-
 html,
 body {
   height: 100vh;
@@ -22,6 +18,11 @@ body {
           align-items: center;
 }
 
+html button,
+body button {
+  cursor: pointer;
+}
+
 header {
   position: relative;
   display: -webkit-box;
@@ -35,7 +36,7 @@ header {
 .header-skew {
   top: 0;
   width: 100vw;
-  height: 400px;
+  height: 399px;
   background: #422755;
   border: 0;
   display: -webkit-box;
@@ -79,6 +80,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -115,7 +119,7 @@ main {
   width: 275px;
   border: 0;
   border-radius: 8px 0px 0px 8px;
-  padding: 10px;
+  padding: 8px;
   font-size: 12px;
   font-weight: 400;
 }
@@ -178,6 +182,35 @@ main {
   margin: 10px;
 }
 
+.card-task .status-tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  margin-left: -30px;
+  margin-top: 5px;
+  height: 30px;
+  width: 100px;
+  font-size: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  z-index: 101;
+  color: #FFFFFF;
+}
+
+.card-task .short-deadline {
+  background-color: #422755;
+}
+
+.card-task .late-task {
+  background-color: #F04837;
+}
+
 .card-task figure {
   margin: 0;
   width: 100%;
@@ -223,13 +256,6 @@ main {
   transition: 1s;
 }
 
-.short-deadline {
-  background-color: #422755;
-  color: #FFFFFF;
-  margin-left: -30px;
-  width: 100px;
-}
-
 .task-title {
   font-weight: bold;
   font-size: 14px;
@@ -263,10 +289,6 @@ main {
   font-weight: 400;
 }
 
-/* .task-info {
-    display: flex;
-    flex-direction: column;
-} */
 .buttons-task {
   display: none;
 }
@@ -313,6 +335,7 @@ button {
 }
 
 .newsletter {
+  width: 960px;
   background-color: #E5E5E5;
   margin-top: 140px;
   border-radius: 8px;
@@ -323,6 +346,9 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .newsletter h2 {
@@ -334,15 +360,14 @@ button {
 }
 
 .newsletter-form {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 30px;
   margin-left: 50px;
-  vertical-align: bottom;
 }
 
 .newsletter-form label {
@@ -359,6 +384,14 @@ button {
   border-radius: 8px;
   margin-right: 10px;
   padding-left: 20px;
+}
+
+.newsletter-form .btn-top {
+  height: 22px;
+}
+
+.newsletter-form button {
+  width: 100px;
 }
 
 .register-btn {
@@ -409,7 +442,7 @@ footer p {
   margin: 0px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 768px) {
   html,
   body {
     width: 100%;
@@ -421,15 +454,15 @@ footer p {
   .header-skew {
     top: 0;
     width: 100%;
-    height: 160px;
+    height: 159px;
     background: #422755;
     border: 0;
   }
   header svg {
     position: absolute;
-    margin-top: 135px;
+    margin-top: 124px;
     width: 100%;
-    height: 25px;
+    height: 35px;
   }
   .header-content {
     margin-top: -40px;
@@ -453,47 +486,34 @@ footer p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 30px 0px;
   }
   .search-bar .search-field {
-    width: 90%;
+    width: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .search-bar .search-field input {
     width: 100%;
-    margin-bottom: 20px;
+  }
+  .search-bar .search-field button {
+    margin-left: -60px;
   }
   .search-bar .search-field label {
     font-size: 12px;
     font-weight: 600;
   }
   .search-bar .search-field .filter-menu {
-    margin: 20px;
     width: 90%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .search-bar .search-field button {
-    margin-left: -60px;
   }
   .tasks-list {
     width: 100%;
   }
   .card-task {
-    width: 100%;
+    width: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -571,16 +591,17 @@ footer p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     width: 90%;
   }
   .about .brand-logo {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 160px;
+    margin-left: 10px;
   }
   .about .about-text {
     text-align: center;
@@ -592,5 +613,37 @@ footer p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media (max-width: 425px) {
+  header svg {
+    margin-top: 133px;
+    height: 26px;
+  }
+  .search-bar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px 0px;
+  }
+  .search-bar .search-field {
+    width: 90%;
+  }
+  .search-bar .search-field input {
+    margin-bottom: 20px;
+  }
+  .search-bar .search-field .filter-menu {
+    margin: 20px;
+  }
+  .card-task {
+    width: 70%;
+  }
+}
+
+@media (max-width: 360px) {
+  .card-task {
+    width: 80%;
   }
 }
