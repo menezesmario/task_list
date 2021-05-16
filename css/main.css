@@ -135,6 +135,7 @@ main {
   font-weight: bold;
   font-size: 14px;
   margin-left: -35px;
+  vertical-align: bottom;
 }
 
 .search-bar select {
@@ -169,6 +170,7 @@ main {
 .card-task {
   background-color: white;
   width: 230px;
+  height: 350px;
   border: solid 1px;
   border-radius: 10px;
   padding: 20px;
@@ -241,19 +243,6 @@ main {
 
 .card-task button .done-mobile {
   display: none;
-}
-
-.card-task:hover {
-  -webkit-box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.25);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.card-task:hover .buttons-task {
-  display: block;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .task-title {
@@ -392,6 +381,7 @@ button {
 
 .newsletter-form button {
   width: 100px;
+  vertical-align: bottom;
 }
 
 .register-btn {
@@ -442,6 +432,21 @@ footer p {
   margin: 0px;
 }
 
+@media (min-width: 769px) {
+  .card-task:hover {
+    -webkit-box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    height: 500px;
+  }
+  .card-task:hover .buttons-task {
+    display: block;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 @media (max-width: 768px) {
   html,
   body {
@@ -476,7 +481,10 @@ footer p {
     color: #FFF;
   }
   .header-content .subtitle {
-    display: none;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    color: #422755;
+    width: 80%;
   }
   main {
     width: 100%;
@@ -489,6 +497,7 @@ footer p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 120px;
   }
   .search-bar .search-field {
     width: 40%;
@@ -521,6 +530,7 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    height: 180px;
   }
   .card-task .task-title {
     margin-top: 0px;

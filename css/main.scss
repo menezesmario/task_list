@@ -19,7 +19,6 @@ $bold: 700;
 $extra-bold: 800;
 
 
-
 html,
 body {
     height: 100vh;
@@ -122,6 +121,7 @@ main {
         font-weight: bold;
         font-size: 14px;
         margin-left: -35px;
+        vertical-align: bottom;
     }
 
     select {
@@ -151,6 +151,7 @@ main {
 .card-task {
     background-color: white;
     width: 230px;
+    height: 350px;
     border: solid 1px;
     border-radius: 10px;
     padding: 20px;
@@ -207,20 +208,6 @@ main {
     }
     
 } 
-
-.card-task:hover {
-    box-shadow: 1px 5px 10px 0px rgba(0,0,0,0.25);
-    transition: 0.2s;
-
-    .buttons-task {
-        display: block;
-        transition: 1s;
-    }
-}
-
-
-
-
 
 .task-title {
     font-weight: bold;
@@ -354,6 +341,7 @@ button {
 
     button {
         width: 100px;
+        vertical-align: bottom;
     }
  
 }
@@ -400,6 +388,20 @@ footer {
 
 // MEDIA QUERIES
 
+@media (min-width: 769px) {
+    .card-task:hover {
+        box-shadow: 1px 5px 10px 0px rgba(0,0,0,0.25);
+        transition: 0.5s;
+        height: 500px;    
+    
+        .buttons-task {
+            display: block;
+            transition: 1s;
+        }
+    }
+}
+
+
 @media (max-width: 768px) {
     html,
     body {
@@ -433,7 +435,10 @@ footer {
         color: #FFF;
         
         .subtitle {
-            display: none;
+            margin-top: 90px;
+            margin-bottom: 50px;
+            color: $primary-color;
+            width: 80%;
         }
     }
 
@@ -445,6 +450,7 @@ footer {
         width: 95%;
         display: flex;
         align-items: center;
+        margin-top: 120px;
 
         .search-field {            
             width: 40%;
@@ -479,6 +485,7 @@ footer {
         width: 40%;
         display: flex;
         flex-direction: row;
+        height: 180px;
 
         .task-title {
             margin-top: 0px;
