@@ -28,7 +28,9 @@ Para o projeto funcionar basta clonar o respositório e abrir o arquivo index.ht
 Fico a disposição para tirar quaisquer dúvidas ou fazer possíveis correções.
 
 ### Contato:
-Mário Menezes | mario082@gmail.com | https://www.linkedin.com/in/menezesmario/
+#### Mário Menezes
+#### mario082@gmail.com
+#### https://www.linkedin.com/in/menezesmario/
 
 
  
