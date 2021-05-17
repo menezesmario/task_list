@@ -23,9 +23,9 @@ Para o projeto funcionar basta clonar o respositório e abrir o arquivo index.ht
 
 ### Observações:
 - Para o desenvolvimento do projeto criei inicialmente o arquivo HTML com toda a estrutura semântica o arquivo em CSS básico para visualizar a estrutra, em seguida iniciei o arquivo main.scss (Sass) para usar padrões de cores e fontes e otimizar a estilização dos elementos. Estilizei primeiramente a versão desktop e depois a versão mobile e as variações em media queries.
-- Aparentemente quase toda a estilização pedida no projeto foi desenvolvida, porém acontece uma falha visual (margem direita inesperada) acontece ao usar o navegador desktop para simular a visualização mobile que é corrigida com reatualização da página ou salvamento do arquivo, e depois de novo teste pode voltar acontecer. 
+- Aparentemente quase toda a estilização pedida no projeto foi desenvolvida, porém acontece uma falha visual (margem direita inesperada) acontece ao usar o navegador desktop para simular a visualização mobile que é corrigida com reatualização da página ou salvamento do arquivo, e depois de novo teste pode voltar acontecer. Tentei o reset mas aconteceram outros problemas e o tempo seria pouco pra corrigir.
 
-Fico a disposição para tirar quaisquer dúvidas
+Fico a disposição para tirar quaisquer dúvidas ou fazer possíveis correções.
 
 ### Contato:
 Mário Menezes | mario082@gmail.com | https://www.linkedin.com/in/menezesmario/
